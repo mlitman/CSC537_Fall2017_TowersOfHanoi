@@ -50,7 +50,16 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
-            //push temp onto t1
+            /*
+            remove view from landing zone so it can POTENTIALLY be added
+            to the tower.
+
+            if the push is successful, set temp to null indicating the
+            landing zone is empty, otherwise, put the view back in the
+            landing zone so it is visually there, and don't set temp to
+            null, since the move was not a legal move.
+             */
+
             this.landingZone.removeAllViews();
             this.t1.push(this.temp);
             this.temp = null;

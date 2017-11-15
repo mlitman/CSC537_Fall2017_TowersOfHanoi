@@ -18,6 +18,17 @@ public class Tower
         this.top = null;
     }
 
+    /*
+    currently does NOT check the Tower of Hanoi rules for placing a disk
+    1. if the tower is empty, a push is allowed
+    2. otherwise, if the disk at the top of the tower is larger than the
+       disk I am trying to push it is a LEGAL move
+    3. If the disk at the top of the tower is smaller than the disk I am
+       trying to push, then it is an ILLEGAL move and should not be allowed
+    HINT: Make this guy return true when a move was successfully made, and
+          false otherwise.  This way you know whether to clear out the landing
+          zone, or reset it to what it was before we tried to make this move.
+     */
     public void push(Disk d)
     {
         if(this.top == null)
