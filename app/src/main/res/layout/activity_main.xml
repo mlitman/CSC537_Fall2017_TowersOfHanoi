@@ -13,6 +13,20 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onResetButtonPressed"
+            android:text="Reset Game" />
+
+        <TextView
+            android:id="@+id/movesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center" />
+
         <LinearLayout
             android:id="@+id/landingZone"
             android:layout_width="match_parent"
@@ -38,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tower2ButtonPressed"
                 android:text="Tower2" />
 
             <Button
@@ -45,6 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="tower3ButtonPressed"
                 android:text="Tower3" />
         </LinearLayout>
 
@@ -101,4 +117,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
